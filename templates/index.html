@@ -1,4 +1,9 @@
-<h1>Hello</h1>
+{% extends 'base.html' %}
 
-<p>This is it</p>
-<p>me is {{ first_name }}</p>
+
+{% block content %}
+
+    <h1>Hello</h1>
+    <p>This is it</p>
+    <p>me is {{ first_name }}</p>
+{% endblock %}
