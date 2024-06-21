@@ -36,6 +36,28 @@ class Users(db.Model):
     def __repr__(self):
         return '<Name %r>' % self.name
 
+@app.route('/delete/<int:id>')
+def delete(id):
+    user_to_delete = Users.query.get_or_404(id)
+    name = None
+    form = UserForm()
+    try:
+        db.session.delete(user_to_delete)
+        db.session.commit()
+        flash("Deleted na")
+        
+        our_users = Users.query.order_by(Users.date_added)
+        return render_template("add_user.html", 
+        form=form,
+        name=name,
+        our_users=our_users)
+        
+    except:
+        flash("Shockking! My problema!")
+        return render_template("add_user.html", 
+        form=form, name=name, our_users=our_users)
+    
+
 
 #create form class
 class UserForm(FlaskForm):
@@ -52,7 +74,7 @@ def update(id):
     if request.method == "POST":
         name_to_update.name = request.form['name']
         name_to_update.email = request.form['email']
-        name_to_update.favorite_color = request.form['favorit_color']
+        name_to_update.favorite_color = request.form['favorite_color']
         try:    
             db.session.commit()
             flash("User Updated Successfully!")
@@ -67,7 +89,8 @@ def update(id):
     else:
         return render_template("update.html",
                                 form=form,
-                                name_to_update=name_to_update)
+                                name_to_update=name_to_update,
+                                id = id)
             
 class NamerForm(FlaskForm):
     name = StringField("Your Name", validators=[DataRequired()])
@@ -87,7 +110,7 @@ def add_user():
     if form.validate_on_submit():
         user = Users.query.filter_by(email=form.email.data).first()
         if user is None:
-            user = Users(name=form.name.data, email=form.email.data, favorite_color=form.favorite_color)    
+            user = Users(name=form.name.data, email=form.email.data, favorite_color=form.favorite_color.data)    
             db.session.add(user)
             db.session.commit()
         name = form.name.data
