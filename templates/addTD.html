@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<h1 class="ui dividing header align-center">TAX DECLARATION OF REAL PROPERTY</h1>
 <form class="ui form">
-    <h4 class="ui dividing header">Real Property Tax Declaration Information</h4>
+    
     <div class="field">
         <label>Edit After Approval from Provincial Assessor's Office</label>
         <div class="two fields">
@@ -113,31 +114,51 @@
                   </div>
                  
                 </div>
+              
+            </div>
+            <div class="field">
+        
                 <div class="four fields">
-                    <div class="field ">
-                      <input type="text" name="shipping[TitleNo]" placeholder="North" >
-                    </div>
-                    <div class="field">
-                      <input type="text" name="shipping[]" placeholder="East">
-                    </div>
-                    <div class="field ">
-                      <input type="text" name="shipping[TitleNo]" placeholder="West" >
-                    </div>
-                    <div class="field">
-                      <input type="text" name="shipping[]" placeholder="South">
-                    </div>
-                   
+                  <div class="field ">
+                    <input type="text" name="shipping[TitleNo]" placeholder="North" >
                   </div>
+                  <div class="field">
+                    <input type="text" name="shipping[]" placeholder="East">
+                  </div>
+                  <div class="field ">
+                    <input type="text" name="shipping[TitleNo]" placeholder="West" >
+                  </div>
+                  <div class="field">
+                    <input type="text" name="shipping[]" placeholder="South">
+                  </div>
+                 
+                </div>
               
             </div>
 
 
 
-        </div>
-        
+       
+        <h3 class="ui dividing header">KIND OF PROPERTY ASSESSED:</h4>
       
-   
-    <div class="ui button" tabindex="0">Submit Order</div>
+        <div class="two fields">
+        
+            <div class="inline field error">
+           
+                <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label>LAND</label>
+                </div>
+                <div class="ui checkbox">
+                    <input type="checkbox" tabindex="1" class="hidden">
+                    <label>BUILDING</label>
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="ui button" tabindex="3">Submit Order</div>
+    </div>
   </form>
 
   {% endblock %}
