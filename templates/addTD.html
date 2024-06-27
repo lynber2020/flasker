@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form class="ui form">
+    <h4 class="ui dividing header">Real Property Tax Declaration Information</h4>
+    <div class="field">
+        <label>Edit After Approval from Provincial Assessor's Office</label>
+        <div class="two fields">
+          <div class="field ">
+            <input type="text" name="shipping[TDNo.]" placeholder="Tax Dec No" >
+          </div>
+          <div class="field">
+            <input type="text" name="shipping[PIN]" placeholder="Property Index No">
+          </div>
+         
+        </div>
+      
+    </div>
+    <div class="field">
+      <label>Owner Information</label>
+      <div class="three fields">
+        <div class="field">
+          <input type="text" name="shipping[first-name]" placeholder="First Name">
+        </div>
+        <div class="field">
+          <input type="text" name="shipping[last-name]" placeholder="Last Name">
+        </div>
+        <div class="field">
+            <input type="text" name="shipping[middle-name]" placeholder="Middle Name">
+          </div>
+      </div>
+    </div>
+    <div class="field">
+        <label>Administrator User</label>
+        <div class="two fields">
+          <div class="field ">
+            <input type="text" name="shipping[]" placeholder="Beneficial User" >
+          </div>
+          <div class="field">
+            <input type="text" name="shipping[]" placeholder="TIN">
+          </div>
+         
+        </div>
+      
+    </div>
+    <h4 class="ui dividing header">Property Location</h4>
+    <div class="fields">        
+        <div class="eight wide field">
+            <input type="text" name="shipping[address]" placeholder="Number and Street">
+        </div>
+        <div class="two wide field">
+                <select class="ui dropdown" name="shipping[Barangay]">
+                    <option value="">Barangay</option>
+                    <option value="01">CAPONGA</option>
+                    <option value="03">AMBONGDOLAN</option>
+                    <option value="02">AMBASSADOR</option>
+                    <option value="04">BA-AYAN</option>
+                    <option value="05">BASIL</option>
+                    <option value="06">CENTRAL</option>
+                    <option value="07">DACLAN</option>
+                    <option value="08">TUEL</option>
+                </select>
+          </div>
+          <div class="six wide field">
+            <input type="text" name="shipping[Municipality]" placeholder="TUBLAY, BENGUET">
+          </div>
+        
+      
+    </div>
+    <div class="field">
+        
+        <div class="two fields">
+          <div class="field ">
+            <input type="text" name="shipping[TitleNo]" placeholder="Certification of Title No." >
+          </div>
+          <div class="field">
+            <input type="text" name="shipping[]" placeholder="Survey No.">
+          </div>
+         
+        </div>
+      
+    </div>
+    <div class="field">
+        
+        <div class="two fields">
+          <div class="field ">
+            <input type="text" name="shipping[TitleNo]" placeholder="Dated:" >
+          </div>
+          <div class="field">
+            <input type="text" name="shipping[]" placeholder="Lot No.">
+          </div>
+         
+        </div>
+      
+    </div>
+    
+    <h4 class="ui dividing header">Property Boundaries</h4>
+    
+            <div class="field">
+        
+                <div class="four fields">
+                  <div class="field ">
+                    <input type="text" name="shipping[TitleNo]" placeholder="North" >
+                  </div>
+                  <div class="field">
+                    <input type="text" name="shipping[]" placeholder="East">
+                  </div>
+                  <div class="field ">
+                    <input type="text" name="shipping[TitleNo]" placeholder="West" >
+                  </div>
+                  <div class="field">
+                    <input type="text" name="shipping[]" placeholder="South">
+                  </div>
+                 
+                </div>
+                <div class="four fields">
+                    <div class="field ">
+                      <input type="text" name="shipping[TitleNo]" placeholder="North" >
+                    </div>
+                    <div class="field">
+                      <input type="text" name="shipping[]" placeholder="East">
+                    </div>
+                    <div class="field ">
+                      <input type="text" name="shipping[TitleNo]" placeholder="West" >
+                    </div>
+                    <div class="field">
+                      <input type="text" name="shipping[]" placeholder="South">
+                    </div>
+                   
+                  </div>
+              
+            </div>
+
+
+
+        </div>
+        
+      
+   
+    <div class="ui button" tabindex="0">Submit Order</div>
+  </form>
+
+  {% endblock %}

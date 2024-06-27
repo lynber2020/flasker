@@ -174,7 +174,11 @@ def page_not_found(e):
 def page_not_found(e):
     return render_template("500.html"), 500
 
-
+#add tax dec INFORMATION
+@app.route('/addTD')
+def addTD():
+     return render_template("addTD.html")
+ 
 #Create Password test page
 @app.route('/test_pw', methods=['GET','POST'])
 def test_pw():
@@ -188,8 +192,8 @@ def test_pw():
         email = form.email.data
         password = form.password_hash.data
         #clear the form
-        form.email.data = ''
-        form.password_hash.data =''
+        #form.email.data = ''
+        #form.password_hash.data =''
         
        # flash("Successfully Submitted")
         
