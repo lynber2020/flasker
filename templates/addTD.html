@@ -1,22 +1,35 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1 class="ui dividing header align-center">TAX DECLARATION OF REAL PROPERTY</h1>
+<h1 class="ui dividing header centered">TAX DECLARATION OF REAL PROPERTY</h1>
 <form class="ui form">
     
     <div class="field">
         <label>Edit After Approval from Provincial Assessor's Office</label>
-        <div class="two fields">
-          <div class="field ">
-            <input type="text" name="shipping[TDNo.]" placeholder="Tax Dec No" >
+        <div class="three fields">
+          <div class="ui label">
+            TD No.
           </div>
-          <div class="field">
+          <div class="three field">
+            <input type="text" name="shipping[PIN]" placeholder="Tax Dec No">
+          </div>
+          <div class="ui label">
+            Property Identification No.
+          </div>
+          <div class="three field">
             <input type="text" name="shipping[PIN]" placeholder="Property Index No">
+          </div>
+          <div class="ui label">
+            Transaction Code
+          </div>
+          <div class="three field">
+            <input type="text" name="shipping[TC]" placeholder="Transaction Code">
           </div>
          
         </div>
       
     </div>
+    <h1 class="ui dividing header"></h1>
     <div class="field">
       <label>Owner Information</label>
       <div class="three fields">
@@ -138,8 +151,9 @@
 
 
 
+        
+        <h3 class="ui dividing header">KIND OF PROPERTY ASSESSED:</h3>
        
-        <h3 class="ui dividing header">KIND OF PROPERTY ASSESSED:</h4>
       
         <div class="two fields">
         
@@ -151,7 +165,23 @@
                 </div>
                 <div class="ui checkbox">
                     <input type="checkbox" tabindex="1" class="hidden">
+                    <label>MACHINERY</label>
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="two fields">
+        
+            <div class="inline field error">
+           
+                <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
                     <label>BUILDING</label>
+                </div>
+                <div class="ui checkbox">
+                    <input type="checkbox" tabindex="1" class="hidden">
+                    <label>OTHERS</label>
                 </div>
             </div>
         
