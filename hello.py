@@ -179,6 +179,11 @@ def page_not_found(e):
 def addTD():
      return render_template("addTD.html")
  
+@app.route('/faas')
+def faas():
+     return render_template("faas.html")
+ 
+ 
 #Create Password test page
 @app.route('/test_pw', methods=['GET','POST'])
 def test_pw():

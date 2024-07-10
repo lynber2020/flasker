@@ -44,12 +44,33 @@
 
 
                 <tr>
-              <th>Serial</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Phone</th>
-              <th>Action</th>
-
+              <th>TC</th>
+              <th>LastName</th>
+              <th>FirstName</th>
+              <th>MiddleName</th>
+              <th>TDN</th>
+              <th>PIN</th>
+              <th>Sitio</th>
+              <th>Barangay</th>
+              <th>Kind</th>
+             
+              <th>Area</th>
+              <th>Area2</th>
+              <th>MV</th>
+              <th>MV2</th>
+              <th>AV</th>
+              <th>AV2</th>
+             
+            
+              <th>TitleNo</th>
+           
+              <th>Effectivity</th>
+              <th>Remarks</th>
+              <th>PrevOwner</th>
+              <th>PrevTDN</th>
+              <th>PrevArea</th>
+              <th>PrevMV</th>
+              <th>PrevAV</th>
 
           </tr>
 
@@ -57,12 +78,36 @@
 
 
 
-                {% for row in students %}
+                {% for row in tbltaxdec %}
                 <tr>
-                    <td>{{row.0}}</td>
+               
                     <td>{{row.1}}</td>
                     <td>{{row.2}}</td>
                     <td>{{row.3}}</td>
+                    <td>{{row.4}}</td>
+                    <td>{{row.5}}</td>
+                    <td>{{row.6}}</td>
+                    <td>{{row.7}}</td>
+                    <td>{{row.8}}</td>
+                    <td>{{row.9}}</td>
+                   
+                    <td>{{row.12}}</td>
+                    <td>{{row.13}}</td>
+                    <td>{{row.14}}</td>
+                    <td>{{row.15}}</td>
+                    <td>{{row.16}}</td>
+                    <td>{{row.17}}</td>
+                    
+                
+                    <td>{{row.20}}</td>
+                   
+                    <td>{{row.22}}</td>
+                    <td>{{row.23}}</td>
+                    <td>{{row.24}}</td>
+                    <td>{{row.25}}</td>
+                    <td>{{row.26}}</td>
+                    <td>{{row.27}}</td>
+                    
                     <td>
 
 
@@ -73,7 +118,7 @@
 
                 </tr>
 
-                <div id="modaledit{{row.0}}" class="modal fade" role="dialog">
+                <div RPID="modaledit{{row.0}}" class="modal fade" role="dialog">
 
 
    <div class="modal-dialog">
@@ -104,7 +149,7 @@
 
 
                   <label>Name:</label>
-                   <input type="hidden"  name="id" value="{{row.0}}">
+                   <input type="hidden"  name="RPID" value="{{row.0}}">
 
                   <input type="text" class="form-control" name="name" value="{{row.1}}">
 
@@ -276,7 +321,7 @@
 
 
 
-  {% include "footer.html" %}
+  
     </div>
 
 
